@@ -1,0 +1,50 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block linkscript %}
+<script src="../../static/like/like.js"></script>
+<link rel="stylesheet" href="../../static/like/like.css">
+{% endblock linkscript %}
+
+{% block base %}
+
+<div class="col-sm-9">
+
+  <div class="one">
+    {% for item in page %}
+      <div class="four">
+          <a href="{{item.address}}" target="_blank" >{{item.name}}</a>
+      <span>{{item.company}}</span>
+      </div>
+   <div class="two">{{item.summary}}</div>
+    <div class="three">豆瓣评分：{{item.score}}</div>
+
+      <div class="five">fgd</div>
+
+      {% endfor %}
+
+      <div class="fenye">
+
+          <a class="item" href="/like/1/">首页</a>
+    {% if page.has_previous %}
+       <a class="item" href="/like/{{page.previous_page_number}}">上一页</a>
+  {% endif %}
+      {%for index  in pageRange %}
+
+        <a href="/like/{{index}}">{{index}}</a>
+
+      {% endfor%}
+
+    {% if page.has_next %}
+      <a class="item" href="/like/{{page.next_page_number}}">下一页</a>
+     {% endif %}
+
+  <a class="item" href="/like/{{page.paginator.num_pages}}">尾页</a>
+
+       </div>
+<br>
+</div>
+</div>
+
+
+{% endblock base %}

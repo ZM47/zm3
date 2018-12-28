@@ -1,0 +1,54 @@
+
+#myCarousel {
+    margin-left: 20px;
+    margin-top: 30px;
+    width: 600px;
+    height: 300px;
+}
+
+.carousel-inner .item a img {
+
+    height: 300px;
+
+
+}
+.tongxin{
+    color: black;
+}
+.paihangbang{
+    margin-top: 10px;
+    border: 1px solid #ebe6e1;
+
+    width: 190px;
+    height: 50%;
+}
+.paihangbang .list-group-item{
+
+    border-radius: 3px;
+    padding-bottom: 2px;
+    padding-left:10px;
+    padding-right:10px;
+
+}
+
+.cover>a>img{
+   width:170px;
+    height: 120px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.average-rating{
+    color: #ffac2d;
+}
+.info .title a{
+     color: #2C8DFB;
+     text-decoration: none;
+ }
+
+.info .title a:hover{
+    color: #FFFFFF;
+    background-color:#2C8DFB;
+}
+.reviews{
+    color: #666 ;
+}

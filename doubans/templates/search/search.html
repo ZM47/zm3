@@ -1,0 +1,86 @@
+{% load static %}
+{% load highlight %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="../../static/main/css/reset.css">
+    <link rel="stylesheet" href="../../static/search/search.css">
+    <link rel="icon" href="../../static/main/img/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+
+
+        <div class=" daohang navbar navbar-default navbar-fixed-top">
+           <div class="container">
+           <div class="navbar-header">
+               <a href="/home/" class="navbar-brand">爬虫图书搜索系统</a>
+           </div>
+
+               <ul class="nav navbar-nav navbar-right ">
+                   <li><a href="/login/">登录</a></li>
+                   <li><a href="/register/">注册</a></li>
+               </ul>
+           </div>
+           </div>
+            <div class="container">
+           <div class=" row search ">
+               <div class="col-sm-4 ">
+                  <p class="search1">图书搜索</p>
+               </div>
+               <div class="col-sm-5 ">
+                   <form action="{% url 'haystack_search' %}" method="get" name="q" >
+                   <div class="input-group input-group-lg"  >
+
+                       <input type="search" class="form-control" name="q" placeholder="书名、作者、出版社">
+
+                       <span class="input-group-btn">
+                       <button class="btn btn-primary" type="submit">搜索</button>
+                       </span>
+
+                   </div>
+                   </form>
+               </div>
+           </div>
+            </div>
+
+        {% if query %}
+
+            <div class="two">
+                 <h3>搜索结果如下：共有{{page.paginator.num_pages}}页</h3>
+              </div>
+               <div class="one ">
+
+
+            {% for result in page.object_list %}
+
+                    <p class="title">{{ result.object.name }}</p>
+                    <p  class="company">{{ result.object.company }}</p>
+                    <a  class="address" href="{{ result.object.address }}" target="_blank">链接地址：{{ result.object.address }}</a>
+
+            {% empty %}
+                <h3>抱歉，未找到任何与之匹配的结果</h3>
+            {% endfor %}
+
+            {% if page.has_previous or page.has_next %}
+                <div class="fenye2">
+
+                     <a  href="?q={{ query }}&page=1">首页</a>
+                    {% if page.has_previous %}<a href="?q={{ query }}&page={{ page.previous_page_number }}">{% endif %}上一页{% if page.has_previous %}</a>{% endif %}
+
+                    {% if page.has_next %}<a href="?q={{ query }}&page={{ page.next_page_number }}">{% endif %}下一页 {% if page.has_next %}</a>{% endif %}
+                               <a href="?q={{ query }}&page={{page.paginator.num_pages}}">尾页</a>
+                </div>
+            {% endif %}
+        {% else %}
+            {# Show some example queries to run, maybe query syntax, something else? #}
+        {% endif %}
+               </div>
+
+
+</body>
+</html>

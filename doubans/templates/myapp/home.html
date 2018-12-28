@@ -1,0 +1,373 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+    {% block linkscript %}
+    <link rel="stylesheet" href="../../static/home/css/home.css">
+    <script src="../../static/home/js/home.js"></script>
+    {% endblock linkscript %}
+
+
+  {% block base %}
+  <!--轮播-->
+
+   <div class="col-sm-7 ">
+  <div id="myCarousel" class=" carousel slide ">                        <!--设置轮播器区域样式，设置轮播器滚动样式-->
+      <ol class="carousel-indicators">                                <!--设置轮播器列表区域样式，就是小圆点区域样式-->
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>    <!--设置当前列表首选-->
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">                                    <!--设置轮播器图片区域-->
+          <div class="item active tp1">                                <!--设置轮播器图片样式-->
+              <a href="https://market.douban.com/book/4321/?region=zhishu_collect_books_list&location=3?region=zhishu_collect_top_banner&location=3?region=zhishu_collect_top_banner&location=4?region=zhishu_collect_top_banner&location=5" target="_blank"><img src="../../static/home/img/3216.jpg" alt="第一张"></a>
+          </div>
+          <div class="item tp2">
+              <a href="https://market.douban.com/book/alain/?region=zhishu_collect_books_list&location=4?region=zhishu_collect_top_banner&location=4" target="_blank"><img src="../../static/home/img/3251.jpg" alt="第二张"></a>
+          </div>
+          <div class="item tp3">
+              <a href="https://market.douban.com/book/littleblack/?region=zhishu_collect_books_list&location=3?region=zhishu_collect_top_banner&location=3" target="_blank"><img src="../../static/home/img/3280%20(1).jpg" alt="第三张"></a>
+          </div>
+      </div>
+      <!--设置轮播器箭头区域-->
+      <a href="#myCarousel" data-slide="prev" class="carousel-control left">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a href="#myCarousel" data-slide="next" class="carousel-control right">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+  </div>
+       <p style="margin-left: 20px;margin-top: 20px;font-size: 30px">热门图书</p>
+
+       <div class="bd">
+           <ul class="list-col list-col2 list-summary  " data-dstat-areaid="61" data-dstat-mode="click,expose">
+
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30336863/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29890136.jpg" alt="回答不了" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30336863/?icn=index-topchart-subject" class="" target="_blank">回答不了</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar45 star-img">
+        </span>
+                           <span class="average-rating" >评分：8.8</span>
+                       </p>
+                       <p class="author">
+                           作者：匡扶
+                       </p>
+                       <p class="book-list-classification">
+                           类型：漫画&nbsp;/&nbsp;生活
+                       </p>
+
+                       <p class="reviews">
+                           哪怕回答不了，尝试回答本身就是一种答案。
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30304849/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29891738.jpg" alt="拍电影时我在想的事" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30304849/?icn=index-topchart-subject" target="_blank">拍电影时我在想的事</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar45 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：8.8
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：[日]是枝裕和
+                       </p>
+                       <p class="book-list-classification">
+                           类型：电影&nbsp;/&nbsp;随笔
+                       </p>
+
+                       <p class="reviews">
+                           他在思考的事情，决定了其电影的样子。
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30254236/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29930566.jpg" alt="4 3 2 1" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30254236/?icn=index-topchart-subject" class="" target="_blank">4 3 2 1</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar45 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：9.1
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：[美] 保罗·奥斯特
+                       </p>
+                       <p class="book-list-classification">
+                           类型：小说&nbsp;/&nbsp;美国文学
+                       </p>
+
+
+                       <p class="reviews">
+                           有没有哪个瞬间，我们发现了自己另外四分之三的人生？
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30301599/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29846936.jpg" alt="电影的秘密" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30301599/?icn=index-topchart-subject" class="" target="_blank">电影的秘密</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar45 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：8.9
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：[美] 斯蒂芬·普林斯
+                       </p>
+                       <p class="book-list-classification">
+                           类型：电影理论&nbsp;/&nbsp;文化研究
+                       </p>
+
+
+                       <p class="reviews">
+                           保持着高度的严谨性，对很多概念的解释，即使篇幅很短，但也说得精准。
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30362170/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29902192.jpg" alt="冬泳" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30362170/?icn=index-topchart-subject" class="" target="_blank">冬泳</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar45 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：8.7
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：班宇
+                       </p>
+                       <p class="book-list-classification">
+                           类型：东北&nbsp;/&nbsp;短篇小说
+                       </p>
+
+
+
+                       <p class="reviews">
+                           水里其实是要比岸上暖和的，所以这些人物没有试图上岸。
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30329883/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29872967.jpg" alt="马尔多罗之歌" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30329883/?icn=index-topchart-subject" class="" target="_blank">马尔多罗之歌</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar50 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：9.4
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：[法] 洛特雷阿蒙
+                       </p>
+                       <p class="book-list-classification">
+                           类型：诗歌&nbsp;/&nbsp;法国文学
+                       </p>
+
+
+                       <p class="reviews">
+                           《马尔多罗之歌》像优秀天才学生写的书，书中悲怆感人之处，正是一个孩子的心起而对抗万物，对抗他自己这些矛盾。
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+               <div class="cover">
+                   <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30316746/?icn=index-topchart-subject" target="_blank">
+                       <img src="../../static/home/img/s29902247.jpg" alt="面具后的女人" class="">
+                   </a>
+               </div>
+               <div class="info">
+                   <h4 class="title">
+                       <a onclick="moreurl(this, {from:'pop_fiction'})" href="https://book.douban.com/subject/30316746/?icn=index-topchart-subject" class="" target="_blank">面具后的女人</a>
+                   </h4>
+                   <p class="entry-star-small">
+        <span class="allstar40 star-img">
+        </span>
+                       <span class="average-rating">
+          评分：8.0
+        </span>
+                   </p>
+                   <p class="author">
+                       作者：[法]柯莱特
+                   </p>
+                   <p class="book-list-classification">
+                       类型：法国&nbsp;/&nbsp;短篇小说
+                   </p>
+
+                   <p class="reviews">
+                       她拓展了女性甚至是同性的话语空间，引领女性解放的风潮。
+
+                   </p>
+               </div>
+           </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30276702/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29879307.jpg" alt="中央帝国的哲学密码" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30276702/?icn=index-topchart-subject" class="" target="_blank">中央帝国的哲学密码</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar40 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：8.1
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：郭建龙
+                       </p>
+                       <p class="book-list-classification">
+                            类型：空想&nbsp;/&nbsp;行政
+                       </p>
+
+
+                       <p class="reviews">
+                           假想自己是全国总公司的总裁，如何治理遍布于全国各省市的分公司？
+
+                       </p>
+                   </div>
+               </li>
+               <li class="col-sm-4">
+                   <div class="cover">
+                       <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30329569/?icn=index-topchart-subject" target="_blank">
+                           <img src="../../static/home/img/s29872673.jpg" alt="人类愚蠢辞典" class="">
+                       </a>
+                   </div>
+                   <div class="info">
+                       <h4 class="title">
+                           <a onclick="moreurl(this, {from:'pop_nonfiction'})" href="https://book.douban.com/subject/30329569/?icn=index-topchart-subject" class="" target="_blank">人类愚蠢辞典</a>
+                       </h4>
+                       <p class="entry-star-small">
+        <span class="allstar35 star-img">
+        </span>
+                           <span class="average-rating">
+          评分：6.9
+        </span>
+                       </p>
+                       <p class="author">
+                           作者：[意大利] 皮耶尔乔治·奥迪弗雷迪
+                       </p>
+                       <p class="book-list-classification">
+                           类型：科普&nbsp;/&nbsp;哲学
+                       </p>
+
+                       <p class="reviews">
+                           我们都是十足的蠢蛋，谁也抛弃不了谁！
+
+                       </p>
+                   </div>
+               </li>
+
+
+
+           </ul>
+       </div>
+
+
+     </div>
+
+
+
+   <div class="col-sm-2 " >
+       <div>
+           <div class="tongxin">通信类排行榜</div>
+           <div class="list-group paihangbang">
+               <a href="https://book.douban.com/subject/2122726/" target="_blank" class="list-group-item  list-group-item-warning ">01 无线通信</a>
+               <a href="https://book.douban.com/subject/4199502/" target="_blank" class="list-group-item list-group-item-warning">02 大话无线通信</a>
+               <a href="https://book.douban.com/subject/1062827/" target="_blank" class="list-group-item list-group-item-warning">03 信号与系统</a>
+               <a href="https://book.douban.com/subject/26743649/" target="_blank" class="list-group-item list-group-item-warning">04 通信之道——从微积分到5G</a>
+               <a href="https://book.douban.com/subject/2188086/" target="_blank" class="list-group-item list-group-item-warning">05 数据通信与网络</a>
+               <a href="https://book.douban.com/subject/1392977/" target="_blank" class="list-group-item list-group-item-warning">06 射频和无线技术入门</a>
+               <a href="https://book.douban.com/subject/1095234/" target="_blank" class="list-group-item list-group-item-warning">07 离散时间信号处理 : 第2版</a>
+           </div>
+       </div>
+
+       <div>
+           <div class="tongxin">编程类排行榜</div>
+           <div class="list-group paihangbang">
+               <a href="https://book.douban.com/subject/1885170/" target="_blank" class="list-group-item  list-group-item-warning ">01 算法导论(第二版)</a>
+               <a href="https://book.douban.com/subject/10546125/" target="_blank" class="list-group-item list-group-item-warning">02 JavaScript高级程序设计（第3版）</a>
+               <a href="https://book.douban.com/subject/26829016/" target="_blank" class="list-group-item list-group-item-warning">03 Python编程:从入门到实践</a>
+               <a href="https://book.douban.com/subject/1477390/"  target="_blank" class="list-group-item list-group-item-warning">04 代码大全</a>
+               <a href="https://book.douban.com/subject/1229923/" target="_blank" class="list-group-item list-group-item-warning">05 重构:改善既有代码的设计</a>
+               <a href="https://book.douban.com/subject/10484692/" target="_blank" class="list-group-item list-group-item-warning">06 Java并发编程实战</a>
+               <a href="https://book.douban.com/subject/4199741/" target="_blank" class="list-group-item list-group-item-warning">07 代码整洁之道</a>
+           </div>
+       </div>
+
+       <div>
+           <div class="tongxin">科技类排行榜</div>
+           <div class="list-group paihangbang">
+               <a href="https://book.douban.com/subject/6709783/" target="_blank" class="list-group-item  list-group-item-warning ">01 浪潮之巅</a>
+               <a href="https://book.douban.com/subject/5375620/" target="_blank" class="list-group-item list-group-item-warning">02 失控 : 全人类的最终命运和结局</a>
+               <a href="https://book.douban.com/subject/26838557/" target="_blank" class="list-group-item list-group-item-warning">03 智能时代 : 大数据与智能革命重新定义未来</a>
+               <a href="https://book.douban.com/subject/25788945/" target="_blank" class="list-group-item list-group-item-warning">04 线上幽灵 : 世界头号黑客米特尼克自传</a>
+               <a href="https://book.douban.com/subject/26997482/" target="_blank" class="list-group-item list-group-item-warning">05 如何思考会思考的机器</a>
+               <a href="https://book.douban.com/subject/26297606/" target="_blank" class="list-group-item list-group-item-warning">06 从0到1 : 开启商业与未来的秘密</a>
+               <a href="https://book.douban.com/subject/26297606/" target="_blank" class="list-group-item list-group-item-warning">07 重新定义公司 : 谷歌是如何运营的</a>
+           </div>
+       </div>
+   </div>
+
+
+
+  {% endblock base %}
+

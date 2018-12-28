@@ -1,0 +1,73 @@
+
+.daohang{
+    background-color: #545652;
+
+
+}
+body { padding-top: 80px; }
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav>li>a {
+    color:#ffffff;
+}
+.search{
+
+   padding-bottom: 35px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 10px;
+
+}
+.search1{
+    padding-left: 200px;
+    color: chocolate;
+    font-size: 35px;
+}
+.title{
+    margin-top: 10px;
+    color: #2C8DFB;
+    font-size: 25px;
+}
+
+.company{
+    margin-left: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+   margin-bottom: 10px;
+    color: black;
+}
+.address{
+    margin-top: 20px;
+    margin-left: 30px;
+    color: fuchsia;
+    font-size: 18px;
+
+}
+.address:hover {
+
+    color: #FFFFFF;
+    background-color: #2C8DFB;
+}
+.fenye2 {
+    margin-top: 10px;
+    font-size: 20px;
+
+    word-spacing: 100px;
+}
+.fenye2 a{
+    text-decoration: none;
+
+
+}
+.one{
+ margin-left:700px;
+
+}
+.one h3{
+    margin-top: 200px;
+ font-size: 28px;
+}
+.two{
+    margin-left: 400px;
+    font-size: 28px;
+}
