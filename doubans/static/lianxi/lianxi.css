@@ -1,0 +1,12 @@
+
+
+.address{
+    line-height: 100px;
+    margin-top: 100px;
+    padding-left: 150px;
+}
+
+.address div{
+    font-style: oblique;
+    font-size: 36px;
+}

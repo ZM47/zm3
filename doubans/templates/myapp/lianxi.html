@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    {#    导入通用css  #}
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="../../static/main/css/reset.css">
+    <link rel="stylesheet" href="../../static/main/css/base.css">
+
+
+
+    <script src="../../static/main/js/base.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.js"></script>
+
+
+    <link rel="stylesheet" href="../../static/lianxi/lianxi.css">
+
+   <link rel="icon" href="../../static/main/img/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<header>
+    <div class=" daohang navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/home/" class="navbar-brand">爬虫图书搜索系统</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right ">
+                <li><a href="/login/">登录</a></li>
+                <li><a href="/register/">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class=" row search ">
+            <div class="col-sm-4 ">
+                <p class="search1">图书搜索</p>
+            </div>
+            <div class="col-sm-5 ">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="书名、作者、出版社">
+                    <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">搜索</button>
+        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</header>
+
+<div>
+    <div class="container" >
+        <div class="row" >
+            <div class="col-sm-3" >
+                <p class="type">分类</p>
+
+                <div class="list-group  side-bar " >
+
+                    <a  href="/home/" class="list-group-item"   >热门图书</a>
+                    <a href="/tuijian/" class=" list-group-item  " >最新推荐</a>
+                    <a href="/like/" class="list-group-item " >猜你喜欢</a>
+                    <a href="/mine/" class="list-group-item" >我的收藏</a>
+                    <a href="/lianxi/" class="list-group-item" >联系我们</a>
+                </div>
+                <p class="type">标签</p>
+                <div class="biaoqian">
+                    <span class="label label-default">历史</span>
+                    <span class="label label-primary">童话</span>
+                    <span class="label label-success">散文</span>
+                    <span class="label label-info">诗歌</span>
+                    <span class="label label-default">职场</span>
+                    <span class="label label-warning">古典文学</span>
+                    <span class="label label-danger">军事</span>
+                    <span class="label label-primary">电影</span>
+                    <span class="label label-warning">言情</span>
+                    <span class="label label-success">互联网</span>
+                    <span class="label label-info">金融</span>
+                    <span class="label label-primary">广告</span>
+                    <span class="label label-warning">科技</span>
+                    <span class="label label-success">武侠</span>
+                    <span class="label label-info">推理</span>
+                    <span class="label label-default">言情</span>
+                    <span class="label label-warning">穿越</span>
+                    <span class="label label-danger">教育</span>
+                    <span class="label label-primary">回忆录</span>
+                </div>
+
+                <div class="row ">
+                    <a class="col-sm-5" href="https://m.douban.com/time/column/123/?dt_time_source=douban-web_inner_right" target="_blank"><img src="../../static/main/img/01def764b59163a.jpg"  style="width: 100px;margin-top: 20px;height: 100px"></a>
+                    <p class="col-sm-7" style="margin-top: 20px">
+                        <a class="kecheng" href="https://m.douban.com/time/column/123/?dt_time_source=douban-web_inner_right" target="_blank" >豆瓣时间 | 提升沟通力，专治各种说不通</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-sm-9 address">
+                <div>联系电话：<a>18179174337</a></div>
+
+                <div>联系地址：<a>xxxxxxxxxxxxxxxxxxxxx</a></div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+  </div>
+<div class="footer1">
+    @ 2018 爬虫图书 中国互联网举报中心京ICP证1401号京ICP备125439号-3京公安备
+</div>
+
+
+
+
+  </body>
+</html>

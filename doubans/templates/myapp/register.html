@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+    {#    导入通用css  #}
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="../../static/main/css/reset.css">
+    <link rel="stylesheet" href="../../static/main/css/base.css">
+
+
+
+    <script src="../../static/main/js/base.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.js"></script>
+
+    <link rel="stylesheet" href="../../static/register/register.css">
+
+   <link rel="icon" href="../../static/main/img/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+<div class=" daohang navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/home/" class="navbar-brand">图书爬虫搜索系统</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right ">
+            <li><a href="/login/" >登录</a></li>
+            <li><a href="/register/">注册</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container container-small  " >
+    <h1 style="color: #337ab7">注册</h1>
+
+
+
+
+    <form action="" method="post">
+
+        {% csrf_token %}
+
+        <p><label  for="id_username">用户名:</label> <input type="text" class="form-control"  name="username" maxlength="150" autofocus required
+                                                        id="id_username"/> <ul><li class="helptext">最多10个字符。包含字母，数字和仅有的@/./+/-/_符号。</li></ul>
+        </p>
+        {% if registerform.errors.username %}
+        <span>  <p>用户名已存在或格式不符合要求</p></span>
+             {% endif %}
+
+          <p><label for="id_昵称">昵称:</label> <input class="form-control" type="text" name="昵称" maxlength="50" id="id_昵称"/></p>
+        <span>{{ registerform.errors.昵称 }}</span>
+        <p><label for="id_password1">密码:</label> <input  class="form-control" type="password" name="password1" required id="id_password1"/>
+           <ul class="helptext"><li>你的密码不能与其他个人信息太相似。</li><li>你的密码必须包含至少 8 个字符。</li><li>你的密码不能是大家都爱用的常见密码。</li><li>你的密码不能全部为数字。</li></ul>
+        </p>
+         {% if registerform.errors.password1 %}
+        <span><p>密码不符合要求</p></span>
+         {% endif %}
+        <p><label for="id_password2">密码确认:</label> <input class="form-control" type="password" name="password2" required id="id_password2"/>
+           <ul> <li class="helptext">为了校验，请输入与上面相同的密码。</li></ul></p>
+        <span>{{ registerform.errors.password2 }}</span>
+        <p><label for="id_email">电子邮件地址:</label> <input  class="form-control" type="email" name="email" maxlength="254" id="id_email"/></p>
+        <span>{{ registerform.errors.email }}</span>
+
+        <p><label for="id_生日">生日:</label> <input  class="form-control" type="date" name="生日" id="id_生日"/></p>
+        <span>{{ registerform.errors.生日 }}</span>
+        <p ><label>请输入验证码:</label>{{ registerform.验证码 }}</p>
+           {% if registerform.errors.验证码 %}
+             <span><p>验证码错误</p></span>
+            {% endif %}
+
+
+        <!--<label>用户名/手机/邮箱</label>-->
+
+            <!--<input type="text" class="form-control">-->
+
+
+
+        <div class="form-group">
+           注册即代表您同意<<a href="#">此系统服务条款</a>>
+        </div>
+
+        <div class="form-group last">
+            <button type="submit" class="btn btn-primary btn-block">注册</button>
+        </div>
+    </form>
+
+
+
+
+
+</div>
+<div class="footer">
+    @ 2018 爬虫图书 中国互联网举报中心京ICP证1401号京ICP备125439号-3京公安备
+</div>
+
+</body>
+</html>

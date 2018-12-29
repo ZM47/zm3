@@ -1,0 +1,51 @@
+
+.container-small{
+
+    max-width: 700px;
+    margin-left: 800px;
+}
+a:hover{
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: #2C8DFB;
+    border-color:#2C8DFB ;
+    width: 200px;
+
+
+}
+
+.btn-primary:hover{
+    background-color:#666;
+}
+.container-small a{
+    color: #337ab7;
+}
+h1 {
+    font-size: 36px;
+}
+.footer{
+    margin-top: 150px;
+
+    text-align: center;
+    color: #cccccc;
+}
+.container-small p{
+  padding-top: 8px;
+    padding-bottom: 8px;
+}
+.helptext{
+    color: #4cae4c;
+}
+.container-small span{
+    color: red;
+}
+.form-control{
+    display: inline;
+    width: 250px;
+    height: 30px;
+}
+.last{
+    margin-top: 20px;
+    margin-left: 50px;
+}

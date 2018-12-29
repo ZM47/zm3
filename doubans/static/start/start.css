@@ -1,0 +1,14 @@
+.jumbotron {
+text-align: center;
+   background-image: url("./FullSizeRender.jpg");
+   background-size: cover;
+   color: #ffffff;
+   padding-top: 200px;
+   line-height: 180px;
+   
+}
+.jumbotron p{
+
+   font-size: xx-large;
+}
+

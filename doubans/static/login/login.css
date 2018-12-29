@@ -1,0 +1,32 @@
+
+.container-small{
+
+    margin-top: 50px;
+    max-width: 500px;
+
+
+}
+a:hover{
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: #2C8DFB;
+    border-color:#2C8DFB ;
+
+}
+
+.btn-primary:hover{
+    background-color:#666;
+}
+.container-small a{
+    color: #337ab7;
+}
+h1 {
+    font-size: 36px;
+}
+.footer{
+    margin-top: 150px;
+
+    text-align: center;
+    color: #cccccc;
+}
