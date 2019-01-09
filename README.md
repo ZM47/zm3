@@ -2,7 +2,7 @@
 
 前端页面大体使用bootstrap框架，自己的ccs和js修改而成。分页设置和搜索设置，登录，注册都是用django自带的框架，
 
-以下是大概是网站演示动图
+以下是大概的网站演示动图
 
 ！[第一张动图] （https://github.com/ZM47/zm3/blob/master/1.gif）
 ！[第二张动图] （https://github.com/ZM47/zm3/blob/master/2.gif）
